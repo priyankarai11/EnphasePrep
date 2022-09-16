@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5]
+        Array.prototype.reduceValue=function(callback,initial)
+        {
+            let curr = initial || 0
+           
+            for (let i = 0; i < this.length; i++) {
+                curr = callback(curr, this[i])
+            }
+            console.log(curr)
+        }
+        arr.reduceValue((curr, acc) => curr + acc,5)
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let result="dRgTg";
+        let array=[]
+        for(let i in result)
+        {
+            if(result[i]===result[i].toUpperCase())
+            {
+                array.push(result[i].toLowerCase())
+            }
+            else {
+                array.push(result[i].toUpperCase())
+            }
+        }
+        console.log(array.join(""))
+    </script>
+</body>
+</html>

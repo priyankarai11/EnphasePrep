@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let str = "abcadbhgfbsas"
+        //     let n = str.length;
+        //     console.log(SubPalindrome(str, n))
+
+            function Palindrome(str, n) {
+                for (let i = 0; i < n / 2; i++) {
+                    if (str[i] !== str[n - 1 - i]) {
+                        return false
+                    }
+                }
+                return true
+            }
+
+            // function SubPalindrome(str, n) {
+            //     let substringLength = str.length;
+            //     while (substringLength > 0) {
+            //         for (let i = 0; i < n - substringLength; i++) {
+            //             let string = str.slice(i, i + substringLength)
+            //             if (Palindrome(string, substringLength))
+            //                 return string
+            //         }
+            //         substringLength--;
+            //     }
+            // }
+
+          
+ 
+
+function longestPalSubstr(str,n)
+{
+   
+    let high = 1, start = 0;
+    for (let i = 0; i < n; i++) {
+        for (let j = i; j < n; j++) {
+             let flag = 1;
+       
+        for (let k = 0; k < (j - i + 1) / 2; k++)
+            if (str[i + k] !== str[j - k])
+                flag = 0;
+  
+            if (flag!=0 && (j - i + 1) > high) {
+                start = i;
+                high = j - i + 1;
+            }
+        }
+    }
+  
+    for (let i = start; i <=  start + high - 1; ++i)
+        document.write(str[i]);
+}
+ 
+
+let str = "fdfgeefeeg";
+let n = str.length;
+longestPalSubstr(str,n)
+
+    </script>
+</body>
+</html>
