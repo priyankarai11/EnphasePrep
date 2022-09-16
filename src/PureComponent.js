@@ -6,7 +6,7 @@ class App extends PureComponent {
   constructor() {
     super();
     this.state = {
-      count: 10,
+      count: 20,
     };
   }
 
